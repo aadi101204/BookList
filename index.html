@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="flex-container-column">
+      <dialog id="dialog">
+        <form id="form">
+          <label for="name">Name of the book:</label>
+          <input type="text" name="name" id="name" />
+          <label for="author">Book Author:</label>
+          <input type="text" name="author" id="author" />
+          <label for="Dateofborrow">Borrow Date:</label>
+          <input type="text" name="Dateofborrow" id="Dateofborrow" />
+          <label for="pages">Number of Pages:</label>
+          <input type="number" name="pages" id="pages" />
+          <input type="submit" value="submit" />
+        </form>
+      </dialog>
+    </div>
+    <div class="flex-container-column">
+      <table id="header">
+        <tr>
+          <th>Name of Book</th>
+          <th>Author</th>
+          <th>Date of Borrow</th>
+          <th>Number of Pages</th>
+        </tr>
+        <tbody></tbody>
+      </table>
+      <button class="flex-item">
+        <h1>Add Book</h1>
+      </button>
+      <button class="flex-item">
+        <h1>Remove Book</h1>
+      </button>
+    </div>
+  </body>
+</html>
