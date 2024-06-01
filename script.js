@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <td>${author}</td>
       <td>${dateOfBorrow}</td>
       <td>${pages}</td>
+      <td><input type="checkbox" id="r"></td>
     `;
 
     // Reset the form and close the dialog
@@ -36,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Handle row selection for removal
-  bookTable.addEventListener("click", (event) => {
+  select = document.getElementById("r");
+  select.addEventListener("click", (event) => {
     if (event.target.tagName === "td") {
       const row = event.target.parentNode;
       row.classList.toggle("selected");
@@ -45,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Remove the selected book
   removeButton.addEventListener("click", () => {
-    const selectedRow = bookTable.querySelector(".selected");
+    const selectedRow = select.querySelector(".selected");
     if (selectedRow) {
       selectedRow.remove();
     } else {
